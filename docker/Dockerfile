@@ -9,9 +9,10 @@ RUN dotnet publish src/MyWeb -c Release -o out
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0-alpine as runtime
 WORKDIR /app
-COPY --from=build /app/out ./
 
 ENV TZ='Asia/Bangkok'
 RUN apk add --no-cache tzdata
+
+COPY --from=build /app/out ./
 
 ENTRYPOINT [ "dotnet", "MyWeb.dll" ]

@@ -2,6 +2,7 @@
 
 - [x] Load balance
 - [x] Response transformation
+- [x] Health monitor
 
 ```
 docker-compose up
