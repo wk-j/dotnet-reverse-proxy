@@ -1,0 +1,4 @@
+GET http://localhost:5122/api/service1/weatherForecast
+
+###
+GET http://localhost:5010/weatherForecast

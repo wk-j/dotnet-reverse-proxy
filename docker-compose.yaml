@@ -1,0 +1,17 @@
+version: "3.1"
+
+services:
+  app1:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+
+    ports:
+      - 5010:80
+
+  app2:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - 5020:80
