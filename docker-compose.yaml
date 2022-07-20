@@ -8,9 +8,14 @@ services:
     ports:
       - 5010:80
 
+    volumes:
+      - ./src/MyWeb/wwwroot/index.js:/app/wwwroot/index.js
   app2:
     build:
       context: .
       dockerfile: docker/Dockerfile
     ports:
       - 5020:80
+
+    volumes:
+      - ./src/MyWeb/wwwroot/index.js:/app/wwwroot/index.js
